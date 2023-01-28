@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
-// import Navigation from './navigations/Navigation';
+import Navigation from './navigations/Navigation';
 
 const App = () => {
   // 이미지를 저장할 state 변수 선언
@@ -32,11 +32,11 @@ const App = () => {
   return (
     <View style={styles.container}>
       <StatusBar style="dark" />
-      {/* <Navigation /> */}
+      <Navigation />
       <TouchableOpacity onPress={selectImages}>
         <Image
           source={require('../assets/gallery.jpeg')}
-          style={{ width: 250, height: 250 }}
+          style={{ width: 200, height: 200 }}
         />
       </TouchableOpacity>
       {images.map((image, index) => (

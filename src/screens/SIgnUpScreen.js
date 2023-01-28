@@ -1,4 +1,6 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { Button, StyleSheet, Text, View } from 'react-native';
+import { AuthRoutes } from '../navigations/routes';
 
 const SignUpScreen = () => {
   const navigation = useNavigation();

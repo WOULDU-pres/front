@@ -3,9 +3,9 @@ import AuthStack from './AuthStack';
 
 const Navigation = () => {
   return (
-    <Navigation>
+    <NavigationContainer>
       <AuthStack />
-    </Navigation>
+    </NavigationContainer>
   );
 };
 
