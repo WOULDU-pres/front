@@ -1,14 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import {
-  View,
-  Button,
-  Image,
-  StyleSheet,
-  TouchableOpacity,
-} from 'react-native';
+import { View, Button, Image, StyleSheet } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
-// import Navigation from './navigations/Navigation';
+import Navigation from './navigations/Navigation';
 
 const App = () => {
   // 이미지를 저장할 state 변수 선언
@@ -32,13 +26,12 @@ const App = () => {
   return (
     <View style={styles.container}>
       <StatusBar style="dark" />
-      {/* <Navigation /> */}
-      <TouchableOpacity onPress={selectImages}>
-        <Image
-          source={require('../assets/gallery.jpeg')}
-          style={{ width: 250, height: 250 }}
-        />
-      </TouchableOpacity>
+      <Navigation />
+      <Button
+        title="Select Images"
+        onPress={selectImages}
+        style={styles.button}
+      />
       {images.map((image, index) => (
         <Image key={index} source={{ uri: image.uri }} style={styles.image} />
       ))}
